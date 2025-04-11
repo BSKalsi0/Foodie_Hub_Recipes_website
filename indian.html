@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Dishes - Foodie Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      color: #333;
+    }
+    header {
+      background-color: #ff3e6c;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      color: white;
+      font-family: 'Pacifico', cursive;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h2.section-title {
+      padding: 40px 40px 10px;
+      font-size: 28px;
+      color: #ff3e6c;
+    }
+    .dish-container {
+      padding: 20px 40px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .dish {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dish:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+    .dish img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .dish h3 {
+      padding: 15px;
+      text-align: center;
+      color: #ff3e6c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff3e6c;
+      color: white;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Indian Dishes</h1>
+    <a href="index.html" style="color: white;">← Back to Home</a>
+  </header>
+
+  <h2 class="section-title">🍃 Veg Dishes</h2>
+  <section class="dish-container">
+    <a href="recipes/palakpaneer.html" class="dish"><img src="recipes/images/PalakPaneer.jpg" alt="Palak Paneer"><h3>Palak Paneer</h3></a>
+    <a href="recipes/cholebhature.html" class="dish"><img src="recipes/images/CholeBhature.jpeg" alt="Chole Bhature"><h3>Chole Bhature</h3></a>
+    <a href="recipes/samosa.html" class="dish"><img src="recipes/images/samosa.jpg" alt="Samosa"><h3>Samosa</h3></a>
+    <a href="recipes/rajma.html" class="dish"><img src="recipes/images/rajma.jpeg" alt="Rajma Chawal"><h3>Rajma Chawal</h3></a>
+    <a href="recipes/dalmakhani.html" class="dish"><img src="recipes/images/dalmakhani.jpeg" alt="Dal Makhani"><h3>Dal Makhani</h3></a>
+    <a href="recipes/aloomatar.html" class="dish"><img src="recipes/images/aloomatar.jpeg" alt="Aloo Matar"><h3>Aloo Matar</h3></a>
+    <a href="recipes/kadhichawal.html" class="dish"><img src="recipes/images/kadhichawal.jpeg" alt="Kadhi Chawal"><h3>Kadhi Chawal</h3></a>
+    <a href="recipes/besanladoo.html" class="dish"><img src="recipes/images/besanladoo.jpeg" alt="Besan Ladoo"><h3>Besan Ladoo</h3></a>
+    <a href="recipes/malaikofta.html" class="dish"><img src="recipes/images/malai_kofta.jpeg" alt="Malai Kofta"><h3>Malai Kofta</h3></a>
+    <a href="recipes/vegbiryani.html" class="dish"><img src="recipes/images/veg_biryani.jpeg" alt="Veg Biryani"><h3>Veg Biryani</h3></a>
+    <a href="recipes/alooparatha.html" class="dish"><img src="recipes/images/alooparatha.jpeg" alt="Aloo Paratha"><h3>Aloo Paratha</h3></a>
+    <a href="recipes/bhindi.html" class="dish"><img src="recipes/images/bhindi.jpeg" alt="Bhindi Masala"><h3>Bhindi Masala</h3></a>
+    <a href="recipes/vegkolhapuri.html" class="dish"><img src="recipes/images/veg_kolhapuri.jpeg" alt="Veg Kolhapuri"><h3>Veg Kolhapuri</h3></a>
+    <a href="recipes/mutterpaneer.html" class="dish"><img src="recipes/images/mutterpaneer.jpeg" alt="Mutter Paneer"><h3>Mutter Paneer</h3></a>
+    <a href="recipes/vegkorma.html" class="dish"><img src="recipes/images/veg_korma.jpeg" alt="Veg Korma"><h3>Veg Korma</h3></a>
+    <a href="recipes/kachori.html" class="dish"><img src="recipes/images/kachori.jpeg" alt="Kachori"><h3>Kachori</h3></a>
+    <a href="recipes/harabharakabab.html" class="dish"><img src="recipes/images/hara_bhara_kabab.jpeg" alt="Hara Bhara Kabab"><h3>Hara Bhara Kabab</h3></a>
+    <a href="recipes/paneertikka.html" class="dish"><img src="recipes/images/paneertikka.jpeg" alt="Paneer Tikka"><h3>Paneer Tikka</h3></a>
+    <a href="recipes/poha.html" class="dish"><img src="recipes/images/poha.jpeg" alt="Poha"><h3>Poha</h3></a>
+    <a href="recipes/upma.html" class="dish"><img src="recipes/images/upma.jpeg" alt="Upma"><h3>Upma</h3></a>
+  </section>
+
+  <h2 class="section-title">🍗 Non-Veg Dishes</h2>
+  <section class="dish-container">
+    <a href="recipes/biryani.html" class="dish"><img src="recipes/images/biryani.jpeg" alt="Biryani"><h3>Chicken Biryani</h3></a>
+    <a href="recipes/butterchicken.html" class="dish"><img src="recipes/images/butterchicken.jpeg" alt="Butter Chicken"><h3>Butter Chicken</h3></a>
+    <a href="recipes/chickencurry.html" class="dish"><img src="recipes/images/chickencurry.jpeg" alt="Chicken Curry"><h3>Chicken Curry</h3></a>
+    <a href="recipes/roganjosh.html" class="dish"><img src="recipes/images/roganjosh.jpeg" alt="Rogan Josh"><h3>Rogan Josh</h3></a>
+    <a href="recipes/muttonkeema.html" class="dish"><img src="recipes/images/muttonkeema.jpeg" alt="Mutton Keema"><h3>Mutton Keema</h3></a>
+    <a href="recipes/tandoorichicken.html" class="dish"><img src="recipes/images/tandoorichicken.jpeg" alt="Tandoori Chicken"><h3>Tandoori Chicken</h3></a>
+    <a href="recipes/muttonkorma.html" class="dish"><img src="recipes/images/muttonkorma.jpeg" alt="Mutton Korma"><h3>Mutton Korma</h3></a>
+    <a href="recipes/chicken65.html" class="dish"><img src="recipes/images/chicken65.jpeg" alt="Chicken 65"><h3>Chicken 65</h3></a>
+    <a href="recipes/fishfry.html" class="dish"><img src="recipes/images/fishfry.jpeg" alt="Fish Fry"><h3>Fish Fry</h3></a>
+    <a href="recipes/mughlai.html" class="dish"><img src="recipes/images/mughlai.jpeg" alt="Chicken Mughlai"><h3>Chicken Mughlai</h3></a>
+    <a href="recipes/muttonrogan.html" class="dish"><img src="recipes/images/muttonrogan.jpeg" alt="Mutton Rogan"><h3>Mutton Rogan</h3></a>
+    <a href="recipes/shamikabab.html" class="dish"><img src="recipes/images/shami.jpeg" alt="Shami Kabab"><h3>Shami Kabab</h3></a>
+    <a href="recipes/seekhkabab.html" class="dish"><img src="recipes/images/seekhkabab.jpeg" alt="Seekh Kabab"><h3>Seekh Kabab</h3></a>
+    <a href="recipes/chillichicken.html" class="dish"><img src="recipes/images/chillichicken.jpeg" alt="Chilli Chicken"><h3>Chilli Chicken</h3></a>
+    <a href="recipes/lambcurry.html" class="dish"><img src="recipes/images/lambcurry.jpeg" alt="Lamb Curry"><h3>Lamb Curry</h3></a>
+  </section>
+
+  <footer>
+    &copy; 2025 Foodie Hub | Designed by Balwinder Singh Kalsi 💌
+  </footer>
+
+</body>
+</html>

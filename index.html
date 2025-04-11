@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie Hub - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+      color: #333;
+    }
+
+    header {
+      background-color: #ff3e6c;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      color: white;
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: url('bg-image.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 48px;
+      z-index: 1;
+      text-shadow: 2px 2px 10px #000;
+      animation: pop 1s ease-out;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .search-box {
+      position: relative;
+      z-index: 1;
+      margin-top: 20px;
+    }
+
+    .search-box input {
+      padding: 14px 24px;
+      width: 350px;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      font-size: 16px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    /* 👇 Stylish Suggestions Dropdown */
+    .suggestions {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      border: 2px solid #ff3e6c;
+      z-index: 999;
+      max-height: 240px;
+      overflow-y: auto;
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .suggestions div {
+      padding: 14px 22px;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #f1f1f1;
+      cursor: pointer;
+      transition: background 0.3s, padding-left 0.3s;
+    }
+
+    .suggestions div:hover {
+      background-color: #ffeff2;
+      padding-left: 28px;
+      font-weight: 600;
+      color: #ff3e6c;
+    }
+
+    .categories {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .card h3 {
+      text-align: center;
+      margin-top: 15px;
+      color: #ff3e6c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff3e6c;
+      color: white;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Foodie Hub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Spice Up Your Tastebuds!</h2>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search recipes...">
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <a href="indian.html" style="text-decoration: none;">
+      <div class="card">
+        <img src="indian.jpg" alt="Indian Food">
+        <h3>Indian</h3>
+      </div>
+    </a>
+    <a href="pasta.html" style="text-decoration: none;">
+      <div class="card">
+        <img src="Italian.jpg" alt="Italian Food">
+        <h3>Pasta</h3>
+      </div>
+    </a>
+    <a href="pizza.html" style="text-decoration: none;">
+      <div class="card">
+        <img src="fastfood.jpg" alt="fast food">
+        <h3>Pizza</h3>
+      </div>
+    </a>
+    <a href="dessert.html" style="text-decoration: none;">
+      <div class="card">
+        <img src="Dessert.jpg" alt="Desserts">
+        <h3>Desserts</h3>
+      </div>
+    </a>
+  </section>
+  
+
+  <footer>
+    &copy; 2025 Foodie Hub | Made with ❤️ by Balwinder Singh Kalsi.
+  </footer>
+
+  <!-- ✅ Improved JS for Highlighted Search -->
+  <script>
+    const recipeMap = {
+      // Indian Veg
+      "palak paneer": "recipes/palakpaneer.html",
+      "chole bhature": "recipes/cholebhature.html",
+      "mutter paneer": "recipes/mutterpaneer.html",
+      "paneer tikka": "recipes/paneertikka.html",
+      "samosa": "recipes/samosa.html",
+      "rajma": "recipes/rajma.html",
+      "dal makhani": "recipes/dalmakhani.html",
+      "aloo matar": "recipes/aloomatar.html",
+      "kadhi chawal": "recipes/kadhichawal.html",
+      "besan ladoo": "recipes/besanladoo.html",
+      "malai kofta": "recipes/malaikofta.html",
+      "veg biryani": "recipes/vegbiryani.html",
+      "aloo paratha": "recipes/alooparatha.html",
+      "bhindi masala": "recipes/bhindi.html",
+      "veg kolhapuri": "recipes/vegkolhapuri.html",
+      "veg korma": "recipes/vegkorma.html",
+      "kachori": "recipes/kachori.html",
+      "hara bhara kabab": "recipes/harabharakabab.html",
+      "poha": "recipes/poha.html",
+      "upma": "recipes/upma.html",
+    
+      // Indian Non-Veg
+      "chicken biryani": "recipes/biryani.html",
+      "butter chicken": "recipes/butterchicken.html",
+      "chicken curry": "recipes/chickencurry.html",
+      "rogan josh": "recipes/roganjosh.html",
+      "mutton keema": "recipes/muttonkeema.html",
+      "tandoori chicken": "recipes/tandoorichicken.html",
+      "egg curry": "recipes/eggcurry.html",
+      "fish curry": "recipes/fishcurry.html",
+      "prawn masala": "recipes/prawnmasala.html",
+      "mutton korma": "recipes/muttonkorma.html",
+      "chicken 65": "recipes/chicken65.html",
+      "fish fry": "recipes/fishfry.html",
+      "chicken mughlai": "recipes/mughlai.html",
+      "mutton rogan": "recipes/muttonrogan.html",
+      "shami kabab": "recipes/shamikabab.html",
+      "seekh kabab": "recipes/seekhkabab.html",
+      "fish kolhapuri": "recipes/fishkolhapuri.html",
+      "chilli chicken": "recipes/chillichicken.html",
+      "lamb curry": "recipes/lambcurry.html",
+      "egg bhurji": "recipes/eggbhurji.html",
+    
+      // Pasta Recipes
+      "penne arrabbiata": "recipes/pennearrabbiata.html",
+      "mac and cheese": "recipes/macandcheese.html",
+      "creamy alfredo pasta": "recipes/alfredo.html",
+      "spaghetti aglio e olio": "recipes/aglioolio.html",
+      "lasagna": "recipes/lasagna.html",
+    
+      // Pizza Recipes
+      "margherita pizza": "recipes/margheritapizza.html",
+      "pepperoni pizza": "recipes/pepperonipizza.html",
+      "bbq chicken pizza": "recipes/bbqchickenpizza.html",
+      "veggie pizza": "recipes/veggiepizza.html",
+      "paneer tikka pizza": "recipes/paneertikkapizza.html",
+    
+      // Desserts
+      "chocolate mousse": "recipes/chocolatemousse.html",
+      "cheesecake": "recipes/cheesecake.html",
+      "rasmalai": "recipes/rasmalai.html",
+      "gulab jamun": "recipes/gulabjamun.html",
+      "brownie": "recipes/brownie.html"
+    };
+    
+
+    const searchInput = document.getElementById("searchInput");
+    const suggestionsDiv = document.getElementById("suggestions");
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.toLowerCase().trim();
+      suggestionsDiv.innerHTML = "";
+      if (query.length === 0) return;
+
+      const suggestions = Object.keys(recipeMap).filter(recipe =>
+        recipe.includes(query)
+      );
+
+      if (suggestions.length === 0) {
+        suggestionsDiv.style.display = "none";
+        return;
+      }
+
+      suggestions.forEach(recipe => {
+        const div = document.createElement("div");
+        const index = recipe.indexOf(query);
+        if (index !== -1) {
+          const match = `<strong style="color:#ff3e6c;">${recipe.substring(index, index + query.length)}</strong>`;
+          div.innerHTML = recipe.substring(0, index) + match + recipe.substring(index + query.length);
+        } else {
+          div.textContent = recipe;
+        }
+        div.onclick = () => window.location.href = recipeMap[recipe];
+        suggestionsDiv.appendChild(div);
+      });
+
+      suggestionsDiv.style.display = "block";
+    });
+
+    searchInput.addEventListener("blur", () => {
+      setTimeout(() => suggestionsDiv.style.display = "none", 200);
+    });
+
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        const query = searchInput.value.toLowerCase().trim();
+        if (recipeMap[query]) {
+          window.location.href = recipeMap[query];
+        } else {
+          alert("Recipe not found!");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Recipes - Foodie Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      color: #333;
+    }
+
+    header {
+      background-color: #ff3e6c;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: white;
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    header a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .section-title {
+      padding: 40px 40px 10px;
+      font-size: 26px;
+      color: #ff3e6c;
+      font-weight: 600;
+    }
+
+    .dish-container {
+      padding: 20px 40px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .dish {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #ff3e6c;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .dish:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      background: #ffe4e8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff3e6c;
+      color: white;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    body > footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>All Recipes</h1>
+    <a href="index.html">← Back to Home</a>
+  </header>
+
+  <!-- Indian Veg Section -->
+  <h2 class="section-title">🌱 Indian Vegetarian Dishes</h2>
+  <section class="dish-container">
+    <a href="recipes/palakpaneer.html" class="dish">Palak Paneer</a>
+    <a href="recipes/cholebhature.html" class="dish">Chole Bhature</a>
+    <a href="recipes/mutterpaneer.html" class="dish">Mutter Paneer</a>
+    <a href="recipes/paneertikka.html" class="dish">Paneer Tikka</a>
+    <a href="recipes/samosa.html" class="dish">Samosa</a>
+    <a href="recipes/rajma.html" class="dish">Rajma</a>
+    <a href="recipes/dalmakhani.html" class="dish">Dal Makhani</a>
+    <a href="recipes/aloomatar.html" class="dish">Aloo Matar</a>
+    <a href="recipes/kadhichawal.html" class="dish">Kadhi Chawal</a>
+    <a href="recipes/besanladoo.html" class="dish">Besan Ladoo</a>
+    <a href="recipes/malaikofta.html" class="dish">Malai Kofta</a>
+    <a href="recipes/vegbiryani.html" class="dish">Veg Biryani</a>
+    <a href="recipes/alooparatha.html" class="dish">Aloo Paratha</a>
+    <a href="recipes/bhindi.html" class="dish">Bhindi Masala</a>
+    <a href="recipes/vegkolhapuri.html" class="dish">Veg Kolhapuri</a>
+    <a href="recipes/vegkorma.html" class="dish">Veg Korma</a>
+    <a href="recipes/kachori.html" class="dish">Kachori</a>
+    <a href="recipes/harabharakabab.html" class="dish">Hara Bhara Kabab</a>
+    <a href="recipes/poha.html" class="dish">Poha</a>
+    <a href="recipes/upma.html" class="dish">Upma</a>
+  </section>
+
+  <!-- Indian Non-Veg Section -->
+  <h2 class="section-title">🍗 Indian Non-Vegetarian Dishes</h2>
+  <section class="dish-container">
+    <a href="recipes/biryani.html" class="dish">Chicken Biryani</a>
+    <a href="recipes/butterchicken.html" class="dish">Butter Chicken</a>
+    <a href="recipes/chickencurry.html" class="dish">Chicken Curry</a>
+    <a href="recipes/roganjosh.html" class="dish">Rogan Josh</a>
+    <a href="recipes/muttonkeema.html" class="dish">Mutton Keema</a>
+    <a href="recipes/tandoorichicken.html" class="dish">Tandoori Chicken</a>
+    <a href="recipes/eggcurry.html" class="dish">Egg Curry</a>
+    <a href="recipes/fishcurry.html" class="dish">Fish Curry</a>
+    <a href="recipes/prawnmasala.html" class="dish">Prawn Masala</a>
+    <a href="recipes/muttonkorma.html" class="dish">Mutton Korma</a>
+    <a href="recipes/chicken65.html" class="dish">Chicken 65</a>
+    <a href="recipes/fishfry.html" class="dish">Fish Fry</a>
+    <a href="recipes/mughlai.html" class="dish">Chicken Mughlai</a>
+    <a href="recipes/muttonrogan.html" class="dish">Mutton Rogan</a>
+    <a href="recipes/shamikabab.html" class="dish">Shami Kabab</a>
+    <a href="recipes/seekhkabab.html" class="dish">Seekh Kabab</a>
+    <a href="recipes/fishkolhapuri.html" class="dish">Fish Kolhapuri</a>
+    <a href="recipes/chillichicken.html" class="dish">Chilli Chicken</a>
+    <a href="recipes/lambcurry.html" class="dish">Lamb Curry</a>
+    <a href="recipes/eggbhurji.html" class="dish">Egg Bhurji</a>
+  </section>
+
+  <!-- Pasta Section -->
+  <h2 class="section-title">🍝 Pasta Recipes</h2>
+  <section class="dish-container">
+    <a href="recipes/pennearrabbiata.html" class="dish">Penne Arrabbiata</a>
+    <a href="recipes/macandcheese.html" class="dish">Mac and Cheese</a>
+    <a href="recipes/alfredo.html" class="dish">Creamy Alfredo Pasta</a>
+    <a href="recipes/aglioolio.html" class="dish">Spaghetti Aglio e Olio</a>
+    <a href="recipes/lasagna.html" class="dish">Lasagna</a>
+  </section>
+
+  <!-- Pizza Section -->
+  <h2 class="section-title">🍕 Pizza Recipes</h2>
+  <section class="dish-container">
+    <a href="recipes/margheritapizza.html" class="dish">Margherita Pizza</a>
+    <a href="recipes/pepperonipizza.html" class="dish">Pepperoni Pizza</a>
+    <a href="recipes/bbqchickenpizza.html" class="dish">BBQ Chicken Pizza</a>
+    <a href="recipes/veggiepizza.html" class="dish">Veggie Pizza</a>
+    <a href="recipes/paneertikkapizza.html" class="dish">Paneer Tikka Pizza</a>
+  </section>
+
+  <!-- Dessert Section -->
+  <h2 class="section-title">🍨 Dessert Recipes</h2>
+  <section class="dish-container">
+    <a href="recipes/chocolatemousse.html" class="dish">Chocolate Mousse</a>
+    <a href="recipes/cheesecake.html" class="dish">Cheesecake</a>
+    <a href="recipes/rasmalai.html" class="dish">Rasmalai</a>
+    <a href="recipes/gulabjamun.html" class="dish">Gulab Jamun</a>
+    <a href="recipes/brownie.html" class="dish">Brownie</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Foodie Hub | Designed by Balwinder Singh Kalsi 💌
+  </footer>
+
+</body>
+</html>

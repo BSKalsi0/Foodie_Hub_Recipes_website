@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pasta Recipes - Foodie Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      color: #333;
+    }
+
+    header {
+      background-color: #ff3e6c;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: white;
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    header a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .section-title {
+      padding: 40px 40px 10px;
+      font-size: 28px;
+      color: #ff3e6c;
+    }
+
+    .dish-container {
+      padding: 20px 40px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .dish {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dish:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    .dish img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish h3 {
+      padding: 15px;
+      color: #ff3e6c;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff3e6c;
+      color: white;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    body > footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pasta Recipes</h1>
+    <a href="index.html">← Back to Home</a>
+  </header>
+
+  <h2 class="section-title">🍝 Delicious Pasta Dishes</h2>
+  <section class="dish-container">
+    <a href="recipes/pennearrabbiata.html" class="dish">
+      <img src="recipes/images\pennearrabbiata..jpeg" alt="Penne Arrabbiata">
+      <h3>Penne Arrabbiata</h3>
+    </a>
+    <a href="recipes/alfredo.html" class="dish">
+      <img src="recipes/images\fettuccinealfredo.jpg" alt="Fettuccine Alfredo">
+      <h3>Fettuccine Alfredo</h3>
+    </a>
+    <a href="recipes/marinara.html" class="dish">
+      <img src="recipes/images\marinara.jpg" alt="Spaghetti Marinara">
+      <h3>Spaghetti Marinara</h3>
+    </a>
+    <a href="recipes/macncheese.html" class="dish">
+      <img src="recipes/images\macncheese.jpg" alt="Mac and Cheese">
+      <h3>Mac and Cheese</h3>
+    </a>
+    <a href="recipes/lasagna.html" class="dish">
+      <img src="recipes/images\lasagna.jpg" alt="Lasagna">
+      <h3>Lasagna</h3>
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2025 Foodie Hub | Designed by Balwinder Singh Kalsi 💌
+  </footer>
+
+</body>
+</html>
