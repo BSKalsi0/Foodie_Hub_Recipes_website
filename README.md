@@ -1,6 +1,6 @@
 # 🌐 Foodie Hub 🍽️
 
-![Foodie Hub Preview](images/preview.jpg) <!-- Replace with your actual image path or hosted URL -->
+![Foodie Hub Preview](https://github.com/BSKalsi0/Foodie_Hub_Recipes_website/blob/main/github-preview.jpg) 
 
 **Foodie Hub** is a beautifully crafted, responsive website dedicated to food lovers! Explore a range of mouth-watering recipes including Indian dishes, pasta, pizza, and desserts — all served with a clean UI and an intuitive browsing experience. 😋🔥
 
